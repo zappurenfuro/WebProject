@@ -6,8 +6,8 @@
     <title>@yield('title')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
-    <header>
+<body class="h-full flex flex-col">
+    <header class="w-full">
         <nav>
             <div class="header-container mx-auto flex justify-between items-center py-4">
                 <div class="text-xl font-bold pl-4">
@@ -36,7 +36,7 @@
             </div>
         </nav>
     </header>
-    <main class="content-container mx-auto py-8">
+    <main class="flex-grow flex items-center justify-center">
         @if (session('success'))
         <div class="bg-green-500 text-white p-4 rounded mb-4">
             {{ session('success') }}
@@ -44,9 +44,9 @@
         @endif
         @yield('content')
     </main>
-    <footer class="footer">
+    <footer class="footer w-full">
         <div class="container mx-auto text-center">
-            &copy; 2023 WebProject. All rights reserved.
+            &copy; 2024 WebProject. All rights reserved.
         </div>
     </footer>
 </body>

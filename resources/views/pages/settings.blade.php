@@ -18,11 +18,12 @@
         </div>
         <div class="mb-4">
             <label for="category" class="block text-gray-400">Preferred Category</label>
-            <select name="category" id="category" class="w-full bg-gray-700 text-white border-none rounded py-2 px-4">
-            <option value="mountain" {{ auth()->user()->preferences->firstWhere('category', 'mountain') ? 'selected' : '' }}>Mountain</option>
-                    <option value="beach" {{ auth()->user()->preferences->firstWhere('category', 'beach') ? 'selected' : '' }}>Beach</option>
-                    <option value="city" {{ auth()->user()->preferences->firstWhere('category', 'city') ? 'selected' : '' }}>City</option>
-                <!-- Tambahkan kategori lainnya -->
+            <select name="category" id="category" class="input-field">
+                <option value="mountain" {{ auth()->user()->preferences->firstWhere('category', 'mountain') ? 'selected' : '' }}>Mountain</option>
+                <option value="beach" {{ auth()->user()->preferences->firstWhere('category', 'beach') ? 'selected' : '' }}>Beach</option>
+                <option value="city" {{ auth()->user()->preferences->firstWhere('category', 'city') ? 'selected' : '' }}>City</option>
+                <option value="island" {{ auth()->user()->preferences->firstWhere('category', 'island') ? 'selected' : '' }}>Island</option>
+                <option value="cultural" {{ auth()->user()->preferences->firstWhere('category', 'cultural') ? 'selected' : '' }}>Cultural</option>
             </select>
         </div>
         <button type="submit" class="bg-teal-500 text-white py-2 px-4 rounded">Update</button>

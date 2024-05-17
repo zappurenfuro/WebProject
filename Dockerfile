@@ -1,5 +1,5 @@
-# Use the official PHP image as the base image
-FROM php:8.1-fpm
+# Use the official PHP image as a base image
+FROM php:8.0-fpm
 
 # Set working directory
 WORKDIR /var/www
@@ -16,15 +16,17 @@ RUN apt-get update && apt-get install -y \
     vim \
     unzip \
     git \
-    curl \
-    libonig-dev \
-    libxml2-dev \
-    && docker-php-ext-install pdo mbstring exif pcntl bcmath gd
+    curl
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Install composer
+# Install PHP extensions
+RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg
+RUN docker-php-ext-install gd
+
+# Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 # Copy existing application directory contents

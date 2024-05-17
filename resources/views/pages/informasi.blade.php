@@ -13,7 +13,7 @@
                         <h2>{{ $info->name }}</h2>
                         <p>{{ $info->description }}</p>
                         <p><strong>Location:</strong> {{ $info->location }}</p>
-                        <a href="{{ route('book', ['destination' => $info->name]) }}" class="btn-primary">Book Now</a>
+                        <a href="{{ route('book', ['destination' => $info->name]) }}" class="btn-primary" target="_blank">Book Now</a>
                     </div>
                 </div>
             @endforeach

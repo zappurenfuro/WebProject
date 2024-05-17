@@ -10,13 +10,22 @@ html, body {
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #1e1e2d;
+    background: url('/public/images/background-4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem; /* Add padding to ensure content isn't touching the edges */
+    position: relative;
+    box-sizing: border-box;
     color: #f1f1f1;
     display: flex;
     flex-direction: column;
 }
 
-/* Add a specific style for the landing page background */
 .landing-page {
     background: url('/public/images/background-3.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -202,7 +211,7 @@ p {
 }
 
 .landing-page-p{
-    color: #eef2f2;
+    color: #c5d5d4;
     font-size: 1.5rem;
 }
 
@@ -271,7 +280,7 @@ label {
 
 .tourism-info-item {
     flex: 0 0 calc(25% - 1.5rem);
-    background-color: #2a2a3d;
+    background-color: rgba(42, 42, 61, 0.85);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -303,6 +312,7 @@ label {
 .tourism-info-item p {
     color: #555;
     margin-bottom: 0.5rem;
+    color: #c5d5d4;
 }
 
 .chat-container {

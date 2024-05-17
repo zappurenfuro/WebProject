@@ -12,6 +12,7 @@
                 <div class="info-content">
                         <h2>{{ $recommendation->name }}</h2>
                         <p>{{ $recommendation->description }}</p>
+                        <a href="{{ route('book', ['destination' => $recommendation->name]) }}" class="btn-primary" target="_blank">Book Now</a>
                     </div>
                 </div>
             @endforeach

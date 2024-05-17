@@ -3,6 +3,9 @@
 use App\Http\Controllers\TourismInfoController;
 use App\Http\Controllers\RecommendationController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\ChatController;
 
 Route::get('/', function () {
     return view('pages.landing');
@@ -45,3 +48,15 @@ Route::middleware(['auth'])->group(function () {
     })->name('settings');
     Route::put('/settings', [UserController::class, 'update'])->name('settings.update');
 });
+
+Route::get('/book/{destination}', [BookingController::class, 'redirectToBooking'])->name('book');
+
+Route::get('/forum', [ForumController::class, 'showForum'])->name('forum')->middleware('auth');
+
+Route::get('/chat/{location}', [ChatController::class, 'showChat'])->name('chat')->middleware('auth');
+
+Route::post('/chat/{location}', [ChatController::class, 'postMessage'])->name('chat.post')->middleware('auth');
+
+Route::get('/forum', [ForumController::class, 'showForum'])->name('forum')->middleware('auth');
+Route::get('/chat/{location}', [ChatController::class, 'showChat'])->name('chat')->middleware('auth');
+Route::post('/chat/{location}', [ChatController::class, 'postMessage'])->name('chat.post')->middleware('auth');

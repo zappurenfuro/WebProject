@@ -16,11 +16,29 @@ body {
     flex-direction: column;
 }
 
+/* Add a specific style for the landing page background */
+.landing-page {
+    background: url('/public/images/background-2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem; /* Add padding to ensure content isn't touching the edges */
+    position: relative;
+    box-sizing: border-box;
+}
+
 header {
-    background-color: #2a2a3d;
+    background-color: rgba(42, 42, 61, 0.8);
     padding: 1rem 0;
-    border-radius: 8px;
+    border-radius: 5px;
     width: 100%;
+    position: fixed;  /* Fix header position */
+    top: 0;  /* Align to top */
+    z-index: 2;  /* Ensure it is above the landing page */
 }
 
 .header-container {
@@ -65,7 +83,7 @@ main {
     object-fit: cover;
     border: 5px solid #ccc;
     background-color: #fff;
-  }
+}
 
 .btn-primary {
     background-color: #00bcd4;
@@ -77,6 +95,8 @@ main {
     margin-top: 1rem;
     text-decoration: none;
     display: inline-block;
+    align-self: center;
+    
 }
 
 .btn-primary:hover {
@@ -90,6 +110,7 @@ main {
 
 .logo a {
     color: #f1f1f1;
+    text-decoration: none;
 }
 
 .nav-links {
@@ -101,6 +122,7 @@ main {
     color: #f1f1f1;
     font-weight: 500;
     margin-right: 1rem;
+    text-decoration: none;
 }
 
 .nav-links a:hover {
@@ -144,16 +166,44 @@ main {
     margin-bottom: 1rem;
 }
 
+.container-informasi::-webkit-scrollbar {
+    display: none;
+}
+
+.container-informasi {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container-informasi {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
 h1 {
     color: #f1f1f1;
     font-size: 2.25rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
+.landing-page-h1{
+    color: #E0FFFF;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
 
 p {
-    color: #b0b0b0;
-    font-size: 1.125rem;
+    color: #aec3c5;
+    font-size: 1.5rem;
+}
+
+.landing-page-p{
+    color: #eef2f2;
+    font-size: 1.5rem;
 }
 
 button {
@@ -170,13 +220,16 @@ button:hover {
 }
 
 .footer {
-    background-color: #2a2a3d;
+    background-color: rgba(42, 42, 61, 0.7);
     color: #f1f1f1;
     text-align: center;
-    padding: 1rem 0;
+    padding: 12px;
     width: 100%;
-    margin-top: auto;
+    height: 10px;
+    position: fixed;  /* Fix footer position */
+    bottom: 0;  /* Align to bottom */
     border-radius: 8px;
+    margin-top: auto;
 }
 
 h2 {
@@ -222,6 +275,9 @@ label {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;  /* Make the container a flexbox container */
+    justify-content: space-between;  /* Ensure elements are spaced evenly */
 }
 
 .tourism-info-item img {
@@ -232,6 +288,10 @@ label {
 
 .tourism-info-item .info-content {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .tourism-info-item h2 {
@@ -243,4 +303,57 @@ label {
 .tourism-info-item p {
     color: #555;
     margin-bottom: 0.5rem;
+}
+
+.chat-container {
+    background-color: #2a2a3d;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+textarea.chat-container {
+    height: 20px;
+    width: 60%;
+    color: #f1f1f1;
+}
+
+.chat-messages {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.message {
+    background-color: #1e1e2d;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.message strong {
+    color: #00bcd4;
+}
+
+.message span {
+    color: #f1f1f1;
+}
+
+textarea {
+    resize: none;
+}
+
+form.flex.items-center {
+    display: flex;
+    align-items: center;
+}
+
+.btn-forum{
+    color: #fff;
+    margin-bottom: 3.1rem;
 }

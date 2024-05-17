@@ -21,7 +21,7 @@
                     <a href="{{ route('about') }}">About</a>
                     <a href="{{ route('informasi') }}">Informasi</a>
                     <a href="{{ route('rekomendasi') }}">Rekomendasi</a>
-                    <a href="{{ route('booking') }}">Booking</a>
+                    <a href="{{ route('forum') }}">Forum</a>
                     @auth
                         <a href="{{ route('settings') }}">Settings</a>
                         <form action="{{ route('logout') }}" method="POST" class="inline">
@@ -44,7 +44,7 @@
         @endif
         @yield('content')
     </main>
-    <footer class="footer w-full">
+    <footer class="footer">
         <div class="container mx-auto text-center">
             &copy; 2024 WebProject. All rights reserved.
         </div>

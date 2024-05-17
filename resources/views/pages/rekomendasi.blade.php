@@ -3,7 +3,7 @@
 @section('title', 'Rekomendasi Wisata')
 
 @section('content')
-    <div class="container mx-auto">
+    <div class="container">
         <h1 class="text-4xl font-bold mb-6">Rekomendasi Wisata</h1>
         <div class="tourism-info-container">
             @foreach($recommendations as $recommendation)

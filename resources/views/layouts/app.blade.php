@@ -12,7 +12,9 @@
             <div class="header-container mx-auto flex justify-between items-center py-4">
                 <div class="text-xl font-bold pl-4">
                     <div class="logo">
-                        <a href="{{ route('landing') }}" class="text-xl font-bold">WebProject</a>
+                        <a href="{{ route('landing') }}">
+                            <img src="{{ asset('images/favicon.png') }}" alt="WebProject Logo">
+                        </a>
                     </div>
                 </div>
                 <div class="nav-links flex space-x-4">

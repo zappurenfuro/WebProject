@@ -20,5 +20,13 @@ class UserController extends Controller
 
         return redirect()->route('settings')->with('success', 'Settings updated successfully.');
     }
-}
 
+    public function destroy(Request $request)
+    {
+        $user = Auth::user();
+        Auth::logout();
+        $user->delete();
+
+        return redirect('/')->with('success', 'Account deleted successfully.');
+    }
+}

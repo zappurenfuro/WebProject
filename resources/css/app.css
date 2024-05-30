@@ -108,13 +108,93 @@ main {
     
 }
 
+.btn-register {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    align-self: center;
+    
+}
+
+.btn-logout {
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    align-self: center;
+    
+}
+
+.btn-delete {
+    margin-top: 1rem;
+    margin-right: 1.7rem;
+    background-color: #d40000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-left: 2rem;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
 .btn-primary:hover {
     background-color: #0097a7;
 }
 
+.btn-primary-edit{
+    font-size: 9px;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    align-self: center;
+}
+
+.btn-primary-edit:hover {
+    background-color: #0097a7;
+}
+
+.btn-primary-delete {
+    font-size: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    background-color: #f44336;
+    
+}
+
+.btn-primary-delete:hover {
+    background-color: #8b0e05;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px; /* Adjust the spacing between buttons as needed */
+    margin-left: auto; /* Pushes the buttons to the right */
+}
+
 .logo {
-    margin-right: 10rem;
-    padding: 10px;
+    margin-left: 1rem;
+    padding: 2px;
 }
 
 .logo a {
@@ -211,7 +291,7 @@ p {
 }
 
 .landing-page-p{
-    color: #c5d5d4;
+    color: #bdcbca;
     font-size: 1.5rem;
 }
 
@@ -310,6 +390,7 @@ label {
 }
 
 .tourism-info-item p {
+    font-size: 1rem;
     color: #555;
     margin-bottom: 0.5rem;
     color: #c5d5d4;

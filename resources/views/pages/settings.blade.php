@@ -26,7 +26,13 @@
                 <option value="cultural" {{ auth()->user()->preferences->firstWhere('category', 'cultural') ? 'selected' : '' }}>Cultural</option>
             </select>
         </div>
-        <button type="submit" class="bg-teal-500 text-white py-2 px-4 rounded">Update</button>
+        <button type="submit">Update</button>
+    </form>
+
+    <form action="{{ route('account.delete') }}" method="POST" class="mt-6 bg-gray-800 p-6 rounded">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn-delete">Delete Account</button>
     </form>
 </div>
 @endsection

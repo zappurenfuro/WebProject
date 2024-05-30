@@ -28,11 +28,11 @@
                         <a href="{{ route('settings') }}">Settings</a>
                         <form action="{{ route('logout') }}" method="POST" class="inline">
                             @csrf
-                            <button type="submit" class="text-white">Logout</button>
+                            <button type="submit" class="btn-logout">Logout</button>
                         </form>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ route('register') }}" class="btn-register">Register</a>
                     @endauth
                 </div>
             </div>
@@ -48,7 +48,7 @@
     </main>
     <footer class="footer">
         <div class="container mx-auto text-center">
-            &copy; 2024 WebProject. All rights reserved.
+            &copy; 2024 NusantaraExplore. All rights reserved.
         </div>
     </footer>
 </body>

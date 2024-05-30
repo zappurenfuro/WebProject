@@ -47,6 +47,7 @@ Route::middleware(['auth'])->group(function () {
         return view('pages.settings');
     })->name('settings');
     Route::put('/settings', [UserController::class, 'update'])->name('settings.update');
+    Route::delete('/account/delete', [UserController::class, 'destroy'])->name('account.delete');
 });
 
 Route::get('/book/{destination}', [BookingController::class, 'redirectToBooking'])->name('book');
@@ -60,3 +61,18 @@ Route::post('/chat/{location}', [ChatController::class, 'postMessage'])->name('c
 Route::get('/forum', [ForumController::class, 'showForum'])->name('forum')->middleware('auth');
 Route::get('/chat/{location}', [ChatController::class, 'showChat'])->name('chat')->middleware('auth');
 Route::post('/chat/{location}', [ChatController::class, 'postMessage'])->name('chat.post')->middleware('auth');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/settings', function () {
+        return view('pages.settings');
+    })->name('settings');
+    Route::put('/settings', [UserController::class, 'update'])->name('settings.update');
+    Route::delete('/account/delete', [UserController::class, 'destroy'])->name('account.delete');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/chat/{location}', [ChatController::class, 'showChat'])->name('chat');
+    Route::post('/chat/{location}', [ChatController::class, 'postMessage'])->name('chat.post');
+    Route::delete('/message/{id}/delete', [ChatController::class, 'deleteMessage'])->name('message.delete');
+    Route::get('/message/{id}/edit', [ChatController::class, 'editMessage'])->name('message.edit');
+    Route::put('/message/{id}', [ChatController::class, 'updateMessage'])->name('message.update');
+});

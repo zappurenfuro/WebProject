@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Landing Page')
+@section('title', 'NusantaraExplore')
 
 @section('content')
 <div class="landing-page">
     <div>
-        <h1 class="landing-page-h1">Paradise of Indonesia</h1>
-        <p class="landing-page-p">Start your adventure</p>
-        <a href="{{ route('informasi') }}" class="btn-primary">Let's Go!</a>
+        <h1 class="landing-page-h1">Nusantara Explore</h1>
+        <p class="landing-page-p">Experience the Extraordinary</p>
+        <a href="{{ route('informasi') }}" class="btn-register">Let's Go!</a>
     </div>
 </div>
 @endsection

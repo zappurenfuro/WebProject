@@ -76,3 +76,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/message/{id}/edit', [ChatController::class, 'editMessage'])->name('message.edit');
     Route::put('/message/{id}', [ChatController::class, 'updateMessage'])->name('message.update');
 });
+
+Route::get('/tourism_info/{id}', [TourismInfoController::class, 'getLongDescription'])->name('tourism_info.long_description');

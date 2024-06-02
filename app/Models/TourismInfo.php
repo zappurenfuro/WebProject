@@ -9,6 +9,12 @@ class TourismInfo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'description', 'location', 'image_url'];
+    protected $fillable = [
+        'name',
+        'description',
+        'location',
+        'image_url',
+        'long_description'
+    ];    
 }
 
